@@ -1,3 +1,6 @@
-const { Sequelize } = require('sequelize')
+const router = require('express').Router()
 
-module.exports = new Sequelize(process.env.JAWSDB_URL || 'mysql://root:rootroot@localhost:3306/beer_db')
+router.use('/api', require('./userRoutes.js'))
+router.use('/api', require('./postRoutes.js'))
+
+module.exports = router
