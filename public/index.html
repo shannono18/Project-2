@@ -11,7 +11,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="">
-            <img src="https://icons.iconarchive.com/icons/flat-icons.com/flat/512/Beer-icon.png" width="30" height="30">
+            <img src="https://icons.iconarchive.com/icons/flat-icons.com/flat/512/Beer-icon.png" width="30" height="35">
           </a>
       
           <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -47,32 +47,46 @@
         </div>
       </nav>
 <!-- Hero section -->
-<section class="hero is-dark is-full has-text-centered">
+<section id="hero" class="hero is-full has-background-warning">
   <div class="hero-body">
-    <p class="title">
-        <strong>Brew Keeper</strong>
-    </p>
-    <p class="subtitle">
-        Find and save your favorite brews!
-    </p>
-  </div>
+    <div class="container has-text-centered">
+      <h1 class="title">Brew Keeper</h1> 
+      <h2 class="subtitle">Find and save your favorite brews!</h2> 
+      <img src="https://assets.newatlas.com/dims4/default/77e7938/2147483647/strip/true/crop/1999x1444+0+0/resize/709x512!/format/webp/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F88%2Fb2%2F8b138bdf42e798306be28558f48a%2Fdepositphotos-31940281-l-2015.jpg">
+    </div> 
 </section>
 <br>
 <!-- Search and filter beers -->
-<div class="columns">
-    <div class="column has-text-centered">
-      What I'm Drinking Now
-      <button class="button is-warning">Search Beers</button>
-    </div>
-    <div class="column has-text-centered">
-      Beers I've Tried
-      <button class="button is-warning">Search History</button>
-    </div>
-    <div class="column has-text-centered">
-      Beers I Liked
-      <button class="button is-warning">Search Favorites</button>
-    </div>
-  </div>
+<div class="field is-grouped">
+  <p class="control is-expanded">
+    <input class="input" type="text" placeholder="What I'm Drinking Now">
+  </p>
+  <p class="control">
+    <a class="button is-dark">
+      Search
+    </a>
+  </p>
+</div>
+<div class="field is-grouped">
+  <p class="control is-expanded">
+    <input class="input" type="text" placeholder="Beers I've Tried">
+  </p>
+  <p class="control">
+    <a class="button is-dark">
+      Search
+    </a>
+  </p>
+</div>
+<div class="field is-grouped">
+  <p class="control is-expanded">
+    <input class="input" type="text" placeholder="Beers I Like">
+  </p>
+  <p class="control">
+    <a class="button is-dark">
+      Search
+    </a>
+  </p>
+</div>
   <!-- Footer -->
   <footer class="footer">
     <div class="content has-text-centered">

@@ -69,7 +69,7 @@ h1 {
 	border: none;
 	outline: none;
 	height: 40px;
-	background: #bbb822;
+	background: #f4ca16;
 	color: #fff;
 	font-size: 18px;
 	border-radius: 20px;
@@ -89,9 +89,9 @@ h1 {
 	text-decoration: none;
 	font-size: 12px;
 	line-height: 20px;
-	color: #bbb822;
+	color: white;
 }
 
 .loginbox a:hover {
-	color: #69680d;
+	color: white;
 }
