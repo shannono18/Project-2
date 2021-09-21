@@ -1,4 +1,4 @@
-const { bulma } = window
+const { bootstrap } = window
 
 document.getElementById('register').addEventListener('click', event => {
 	event.preventDefault()
