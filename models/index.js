@@ -1,6 +1,7 @@
-const router = require('express').Router()
+const User = require('./User.js')
+const Post = require('./Post.js')
 
-router.use('/api', require('./userRoutes.js'))
-router.use('/api', require('./postRoutes.js'))
+User.hasMany(Post, { foreignKey: 'uid' })
+Post.belongsTo(User, { as: 'u', foreignKey: 'uid' })
 
-module.exports = router
+module.exports = { User, Post }
