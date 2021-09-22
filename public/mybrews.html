@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Brew Keeper</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css" />
   </head>
   <body>
   <!-- Nav bar and hamburger menu -->
-    <nav class="navbar has-background-white" role="navigation" aria-label="main navigation">
+    <nav class="navbar has-background-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="">
             <img src="https://icons.iconarchive.com/icons/flat-icons.com/flat/512/Beer-icon.png" width="30" height="35">
@@ -24,11 +25,11 @@
       
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item" href="index.html">
+            <a class="navbar-item has-text-white" href="index.html">
               Home
             </a>
             
-            <a class="navbar-item" href="mybrews.html">
+            <a class="navbar-item has-text-white" href="mybrews.html">
               My Brews
             </a>
           </div>
@@ -39,7 +40,7 @@
                 <a class="button is-warning">
                   <strong>Sign up</strong>
                 </a>
-                <a class="button is-link">
+                <a class="button is-link has-text-white">
                   Log out <output></output>
                 </a>
               </div>
@@ -59,17 +60,17 @@
           <nav class="tabs is-boxed is-fullwidth is-large">
                   <div class="container">
                     <ul>
-                      <li class="tab is-active" onclick="openTab(event,'beersLiked')"><a >Beers I Like</a></li>
-                      <li class="tab" onclick="openTab(event,'beersTried')"><a >Beers I've Tried</a></li>
+                      <li class="tablinks is-active" onclick="openTab(event,'Beers I Like')"><a >Beers I Like</a></li>
+                      <li class="tablinks" onclick="openTab(event,'Beers I Tried')"><a >Beers I Tried</a></li>
                     </ul>
                   </div>
-                </nav>
-            </div>
+          </nav>
+          </div>
     </section>
-        <!-- Tabs -->
-        <div class="container section">
-          <div id="beersLiked" class="content-tab" >
-            <section class="section">
+    <br>
+<!-- Tabs content-->
+        <section>
+          <div id="Beers I Like" class="tabcontent" >
               <div class="container has-text-centered">
                 <div class="tile is-ancestor">
                     <div class="tile is-parent">
@@ -122,10 +123,11 @@
                             <a class="button">Remove</a>
                         </article>
                     </div>
-                  </div>
-            </div>  
-          <div id="beersTried" class="content-tab" style="display:none">
-            <section class="section has-background-warning">
+          </div>  
+        </section>
+        <br>
+        <section>
+          <div id="Beers I Tried" class="tabcontent" style="display:none">
               <div class="container has-text-centered">
                   <div class="tile is-ancestor">
                       <div class="tile is-parent">
@@ -179,7 +181,7 @@
                           </article>
                       </div>
                   </div>
-      
+                </section>
   <!-- Footer -->
   <footer class="footer">
     <div class="content has-text-centered">
@@ -191,5 +193,5 @@
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  
+  <script src="assets/js/profile.js"></script>
 </html>
