@@ -6,13 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BrewKeeper - Login Page</title>
+	<link rel="icon" href="Beer-icon.png">
 	<link rel="stylesheet" href="./assets/css/login.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
 <body>
 	<div class="loginbox">
-		<img src="./Beer-icon.png" alt="Beer-icon" class="beer-icon">
+		<img src="../public/assets/img/Beer-icon.png" alt="Beer-icon" class="beer-icon">
 		<h1>Brew Keeper</h1>
 		<form>
 			<p>Username</p>
@@ -20,7 +21,10 @@
 			<p>Password</p>
 			<input type="password" name="" id="lPassword" placeholder="Enter Password">
 			<input type="button" name="" id="login" value="Login">
-			<input type="button" name="" id="register" value="Register">
+			<a href="register.html">
+				<input type="button" name="" id="lRegister" value="Register">
+			</a>
+		</form>
 			<a href="./index.html">Don't have an account? Login as a guest</a>
 		</form>
 	</div>
