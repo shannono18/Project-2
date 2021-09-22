@@ -51,120 +51,139 @@
           </div>
         </div>
       </nav>
-<!-- Display beers I like -->
-<section class="section has-background-warning">
-    <div class="container has-text-centered">
-        <h2 class="title">Beers I Like</h2>
-        <div class="tile is-ancestor">
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <figure class="image">
-                        <img src="../images/pexels-photo-374710.jpeg">
-                    </figure>
-                    <p class="title">Bad Elmer's Porter</p>
-                    <p class="subtitle">Upland Brewery</p>
-                    <a class="button">Remove</a>
-                </article>
+    <section class="hero is-link">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+              <h1 class="title">
+                My Brews 
+              </h1>
             </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <figure class="image">
-                        <img src="../images/pexels-photo-374710.jpeg">
-                    </figure>
-                    <p class="title">J.W.P. American Stout</p>
-                    <p class="subtitle">Daredevil Brewing Co.</p>
-                    <a class="button">Remove</a>
-                </article>
+        </div> 
+        <div class="hero-foot">
+          <nav class="tabs is-boxed is-fullwidth is-large">
+                  <div class="container">
+                    <ul>
+                      <li class="tab is-active" onclick="openTab(event,'beersLiked')"><a >Beers I Like</a></li>
+                      <li class="tab" onclick="openTab(event,'beersTried')"><a >Beers I've Tried</a></li>
+                    </ul>
+                  </div>
+                </nav>
             </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <figure class="image">
-                        <img src="../images/pexels-photo-374710.jpeg">
-                    </figure>
-                    <p class="title">Harvest Patch Shandy</p>
-                    <p class="subtitle">Leinenkugel Brewing Company</p>
-                    <a class="button">Remove</a>
-                </article>
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <figure class="image">
-                        <img src="../images/pexels-photo-374710.jpeg">
-                    </figure>
-                    <p class="title">Ten FIDY</p>
-                    <p class="subtitle">Oskar Blues Brewery</p>
-                    <a class="button">Remove</a>
-                </article>
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <figure class="image">
-                        <img src="../images/pexels-photo-374710.jpeg">
-                    </figure>
-                    <p class="title">Zombie Dust</p>
-                    <p class="subtitle">Three Floyds Brewing Co.</p>
-                    <a class="button">Remove</a>
-                </article>
-            </div>
-        </div>
-</section>
-<!-- Display beers I've tried -->
-<section class="section has-background-link">
-    <div class="container has-text-centered">
-        <h2 class="title">Beers I've Tried</h2>
-        <div class="tile is-ancestor">
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <figure class="image">
-                        <img src="../images/pexels-photo-374710.jpeg">
-                    </figure>
-                    <p class="title">Bad Elmer's Porter</p>
-                    <p class="subtitle">Upland Brewery</p>
-                    <a class="button">Remove</a>
-                </article>
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <figure class="image">
-                        <img src="../images/pexels-photo-374710.jpeg">
-                    </figure>
-                    <p class="title">J.W.P. American Stout</p>
-                    <p class="subtitle">Daredevil Brewing Co.</p>
-                    <a class="button">Remove</a>
-                </article>
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <figure class="image">
-                        <img src="../images/pexels-photo-374710.jpeg">
-                    </figure>
-                    <p class="title">Harvest Patch Shandy</p>
-                    <p class="subtitle">Leinenkugel Brewing Company</p>
-                    <a class="button">Remove</a>
-                </article>
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <figure class="image">
-                        <img src="../images/pexels-photo-374710.jpeg">
-                    </figure>
-                    <p class="title">Ten FIDY</p>
-                    <p class="subtitle">Oskar Blues Brewery</p>
-                    <a class="button">Remove</a>
-                </article>
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <figure class="image">
-                        <img src="../images/pexels-photo-374710.jpeg">
-                    </figure>
-                    <p class="title">Zombie Dust</p>
-                    <p class="subtitle">Three Floyds Brewing Co.</p>
-                    <a class="button">Remove</a>
-                </article>
-            </div>
-        </div>
-</section>
+    </section>
+        <!-- Tabs -->
+        <div class="container section">
+          <div id="beersLiked" class="content-tab" >
+            <section class="section">
+              <div class="container has-text-centered">
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <figure class="image">
+                                <img src="../images/pexels-photo-374710.jpeg">
+                            </figure>
+                            <p class="title">Bad Elmer's Porter</p>
+                            <p class="subtitle">Upland Brewery</p>
+                            <a class="button">Remove</a>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <figure class="image">
+                                <img src="../images/pexels-photo-374710.jpeg">
+                            </figure>
+                            <p class="title">J.W.P. American Stout</p>
+                            <p class="subtitle">Daredevil Brewing Co.</p>
+                            <a class="button">Remove</a>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <figure class="image">
+                                <img src="../images/pexels-photo-374710.jpeg">
+                            </figure>
+                            <p class="title">Harvest Patch Shandy</p>
+                            <p class="subtitle">Leinenkugel Brewing Company</p>
+                            <a class="button">Remove</a>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <figure class="image">
+                                <img src="../images/pexels-photo-374710.jpeg">
+                            </figure>
+                            <p class="title">Ten FIDY</p>
+                            <p class="subtitle">Oskar Blues Brewery</p>
+                            <a class="button">Remove</a>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <figure class="image">
+                                <img src="../images/pexels-photo-374710.jpeg">
+                            </figure>
+                            <p class="title">Zombie Dust</p>
+                            <p class="subtitle">Three Floyds Brewing Co.</p>
+                            <a class="button">Remove</a>
+                        </article>
+                    </div>
+                  </div>
+            </div>  
+          <div id="beersTried" class="content-tab" style="display:none">
+            <section class="section has-background-warning">
+              <div class="container has-text-centered">
+                  <div class="tile is-ancestor">
+                      <div class="tile is-parent">
+                          <article class="tile is-child box">
+                              <figure class="image">
+                                  <img src="../images/pexels-photo-374710.jpeg">
+                              </figure>
+                              <p class="title">Bad Elmer's Porter</p>
+                              <p class="subtitle">Upland Brewery</p>
+                              <a class="button">Remove</a>
+                          </article>
+                      </div>
+                      <div class="tile is-parent">
+                          <article class="tile is-child box">
+                              <figure class="image">
+                                  <img src="../images/pexels-photo-374710.jpeg">
+                              </figure>
+                              <p class="title">J.W.P. American Stout</p>
+                              <p class="subtitle">Daredevil Brewing Co.</p>
+                              <a class="button">Remove</a>
+                          </article>
+                      </div>
+                      <div class="tile is-parent">
+                          <article class="tile is-child box">
+                              <figure class="image">
+                                  <img src="../images/pexels-photo-374710.jpeg">
+                              </figure>
+                              <p class="title">Harvest Patch Shandy</p>
+                              <p class="subtitle">Leinenkugel Brewing Company</p>
+                              <a class="button">Remove</a>
+                          </article>
+                      </div>
+                      <div class="tile is-parent">
+                          <article class="tile is-child box">
+                              <figure class="image">
+                                  <img src="../images/pexels-photo-374710.jpeg">
+                              </figure>
+                              <p class="title">Ten FIDY</p>
+                              <p class="subtitle">Oskar Blues Brewery</p>
+                              <a class="button">Remove</a>
+                          </article>
+                      </div>
+                      <div class="tile is-parent">
+                          <article class="tile is-child box">
+                              <figure class="image">
+                                  <img src="../images/pexels-photo-374710.jpeg">
+                              </figure>
+                              <p class="title">Zombie Dust</p>
+                              <p class="subtitle">Three Floyds Brewing Co.</p>
+                              <a class="button">Remove</a>
+                          </article>
+                      </div>
+                  </div>
+      
   <!-- Footer -->
   <footer class="footer">
     <div class="content has-text-centered">
