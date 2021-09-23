@@ -4,5 +4,6 @@ const Beer = require('./Beer.js')
 
 User.hasMany(Post, { foreignKey: 'uid' })
 Post.belongsTo(User, { as: 'u', foreignKey: 'uid' })
+// Beer.belongsTo(User, { as: 'u', foreignKey: 'uid'})
 
 module.exports = { User, Post, Beer }
