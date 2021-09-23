@@ -5,7 +5,9 @@ class Beer extends Model { }
 
 Beer.init({
 	name: DataTypes.STRING,
-	abv: DataTypes.FLOAT
+	type: DataTypes.STRING,
+	abv: DataTypes.FLOAT,
+	brewery: DataTypes.STRING
 }, { sequelize, modelName: 'beer' })
 
 module.exports = Beer

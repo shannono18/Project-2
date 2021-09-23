@@ -1,7 +1,7 @@
 body, html {
 	margin: 0;
 	padding: 0;
-	background: url('../../beer-background.jpg');
+	background: url('../img/beer-background.jpg');
 	background-position: auto;
 	background-size: cover;
 	font-family: sans-serif;
