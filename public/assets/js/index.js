@@ -8,13 +8,18 @@ document.getElementById('beer-search').addEventListener('click', event => {
 	let search = document.getElementById('beer-name').value
 
 	axios.get(`/api/beers/${search}`)
-		.then(({ data: name, abv }) => {
-			if (name) {
-				console.log(name)
-				console.log(abv)
+		.then(({ data }) => {
+			if (data.length !== 0) {
+				// there is search result we will display result below searchbar
+				console.log(data.length)
+
+
 			}
 			else {
-				alert('No Beer data found')
+				// if there is no result, we will display no result and let user add the beer into the database
+				
+
+
 			}
 		})
 })
