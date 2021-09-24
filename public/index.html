@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   </head>
-  <>
   <!-- Nav bar and hamburger menu -->
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
@@ -70,55 +69,101 @@
 
     <div class="container result-display">
 
-      <section>
-          <div class="container has-text-centered">
-            <div class="tile is-ancestor">
-              <div class="tile is-parent">
-                <article class="tile is-child box has-background-warning">
-                  <figure class="image">
-                    <img src="./assets/img/guinness.jpg">
-                  </figure>
-                  <p class="title">Guinness</p>
-                  <p class="subtitle">Upland Brewery</p>
-                  <a class="button">Post</a>
-                </article>
-              </div>
-              <div class="tile is-parent">
-                <article class="tile is-child box has-background-warning">
-                  <figure class="image">
-                    <img src="./assets/img/BadElmers.png">
-                  </figure>
-                  <p class="title">Bad Elmer's Porter</p>
-                  <p class="subtitle">Upland Brewery</p>
-                  <a class="button">Post</a>
-                </article>
-              </div>
-              <div class="tile is-parent">
-                <article class="tile is-child box has-background-warning">
-                  <figure class="image">
-                    <img src="./assets/img/Vice-Black-Currant.jpg">
-                  </figure>
-                  <p class="title">Vice w/ Black Currant</p>
-                  <p class="subtitle">Wild Barrel Brewing</p>
-                  <a class="button">Post</a>
-                </article>
-              </div>
-              <div class="tile is-parent">
-                <article class="tile is-child box has-background-warning">
-                  <figure class="image">
-                    <img src="./assets/img/guinness.jpg">
-                  </figure>
-                  <p class="title">Michael's fav</p>
-                  <p class="subtitle">Oskar Blues Brewery</p>
-                  <a class="button">Post</a>
-                </article>
-              </div>
-            </div>
+      <div class="modal-container">
+        <button class="button is-primary is-large modal-button" data-target="modal" aria-haspopup="true">add beer</button>
+      </div>
+
+      <div class="container has-text-centered tile is-ancestor" id="result-display">
+          <div class="tile is-parent">
+            <article class="tile is-child box has-background-warning">
+              <figure class="image">
+                <img src="./assets/img/guinness.jpg">
+              </figure>
+              <p class="title">Guinness</p>
+              <p class="subtitle">Upland Brewery</p>
+              <a class="button">Post</a>
+            </article>
           </div>
-      </section>
+          <div class="tile is-parent">
+            <article class="tile is-child box has-background-warning">
+              <figure class="image">
+                <img src="./assets/img/BadElmers.png">
+              </figure>
+              <p class="title">Bad Elmer's Porter</p>
+              <p class="subtitle">Upland Brewery</p>
+              <a class="button">Post</a>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box has-background-warning">
+              <figure class="image">
+                <img src="./assets/img/Vice-Black-Currant.jpg">
+              </figure>
+              <p class="title">Vice w/ Black Currant</p>
+              <p class="subtitle">Wild Barrel Brewing</p>
+              <a class="button">Post</a>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box has-background-warning">
+              <figure class="image">
+                <img src="./assets/img/guinness.jpg">
+              </figure>
+              <p class="title">Michael's fav</p>
+              <p class="subtitle">Oskar Blues Brewery</p>
+              <a class="button">Post</a>
+            </article>
+          </div>
+      </div>
+    </div>
 
-      
+    <div id="modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>We don't have your beer in our database! Add your favorite beer so you can post it!</strong>
+                  <br>
 
+                  <div class="field is-grouped">
+                    <p class="control is-expanded">
+                      <input class="input is-rounded" type="text" id="beer-name-add" placeholder="Type beer name">
+                    </p>
+                    <p class="control is-expanded">
+                      <input class="input is-rounded" type="text" id="beer-abv-add" placeholder="abv">
+                    </p>
+                    <p class="control is-expanded">
+                      <input class="input is-rounded" type="text" id="beer-brewery-add" placeholder="brewery">
+                    </p>
+                  </div>
+                  <p class="control">
+                    <button class="button is-dark" id="beer-add">Add</button>
+                  </p>
+
+                </p>
+              </div>
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <a class="level-item" aria-label="retweet">
+                    <span class="icon is-small">
+                      <i class="fas fa-retweet" aria-hidden="true"></i>
+                    </span>
+                  </a>
+                  <a class="level-item" aria-label="like">
+                    <span class="icon is-small">
+                      <i class="fas fa-heart" aria-hidden="true"></i>
+                    </span>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </article>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
     </div>
 
   </div> 
