@@ -6,3 +6,6 @@
 	background-size: cover;
 	background-color: #999;
 }
+.parallax {
+    opacity: 0.5;
+}
