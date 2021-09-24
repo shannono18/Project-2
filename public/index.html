@@ -8,22 +8,24 @@
     <link rel="icon" href="./assets/img/Beer-icon.png">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="node_modules/universal-parallax/dist/universal-parallax.min.css" rel="stylesheet">
   </head>
   <body>
   <!-- Nav bar and hamburger menu -->
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="">
+          <img src="https://icons.iconarchive.com/icons/flat-icons.com/flat/512/Beer-icon.png" width="30" height="35">
           </a>
       
-          <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
       
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbarBasicExample" class="navbar-menu is-active">
           <div class="navbar-start">
             <a class="navbar-item" href="index.html">
               Home
@@ -32,7 +34,7 @@
             <a class="navbar-item" href="mybrews.html">
               My Brews
             </a>
-            <a class="navbar-item" href="about.html">About Us</a>
+            <a class="navbar-item" href="aboutus.html">About Us</a>
           </div>
       
           <div class="navbar-end">
@@ -51,6 +53,7 @@
       </nav>
 <!-- Hero section -->
 <section id="hero" class="hero is-full has-background-light">
+  <div class="parallax" background-image="../img/beer-background.jpg"></div>
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">Brew Keeper</h1> 
@@ -67,8 +70,6 @@
     </div>
 
     <div class="container result-display">
-      <img src="../public/assets/img/guinness.jpg" alt="">\
-      <img src="https://github.com/shannono18/Project-2/blob/main/Beer%20Hops.jpg?raw=true" alt="">
     </div>
 
   </div> 
@@ -84,6 +85,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./assets/js/index.js"></script>
-
+  <script src="node_modules/universal-parallax/dist/universal-parallax.min.js"></script>
   </body>
 </html>

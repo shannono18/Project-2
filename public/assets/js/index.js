@@ -18,3 +18,8 @@ document.getElementById('beer-search').addEventListener('click', event => {
 			}
 		})
 })
+
+new universalParallax().init({
+    speed: 6.0
+});
+
