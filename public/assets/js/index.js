@@ -51,30 +51,35 @@ document.getElementById('beer-search').addEventListener('click', event => {
 				document.getElementById('result-display').innerHTML = ''
 
 				const addElem = document.createElement('div')
-				addElem.classList = 'modal add-modal'
+				addElem.classList = 'button add-btn'
 				addElem.innerHTML = `
-				<div class="modal-background"></div>
-				<div class="modal-card">
-					<header class="modal-card-head">
-						<p class="modal-card-title">Add Beer</p>
-						<button class="delete" aria-label="close"></button>
-					</header>
-					<section class="modal-card-body">
-						<!-- Content ... -->
-					</section>
-					<footer class="modal-card-foot">
-						<button class="button is-success">Save changes</button>
-						<button class="button">Cancel</button>
-					</footer>
-				</div>
+				<p>
+				<button class="button is-primary is-large modal-button" data-target="modal" aria-haspopup="true">We don't have your beer in our Database! Please Add your beer into database!
+				</button>
+				</p>
 				`
-				document.getElementById('modal-placeholder').append(addElem)
 
+				document.getElementById('result-display').append(addElem)
 			}
 		})
 })
 
-new universalParallax().init({
-    speed: 6.0
-});
+document.addEventListener('click', event => {
+	event.preventDefault()
+	if(event.target.classList.contains('modal-button')) {
+		var element = document.getElementById('modal')
+		element.classList.add("is-active")
+	}
+
+	if (event.target.classList.contains('modal-close')) {
+		var element = document.getElementById('modal')
+		element.classList.remove("is-active")
+	}
+
+})
+
+
+// new universalParallax().init({
+//     speed: 6.0
+// })
 
