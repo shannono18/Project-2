@@ -1,0 +1,46 @@
+<section>
+          <div class="container has-text-centered">
+            <div class="tile is-ancestor">
+              <div class="tile is-parent">
+                <article class="tile is-child box has-background-warning">
+                  <figure class="image">
+                    <img src="./assets/img/guinness.jpg">
+                  </figure>
+                  <p class="title">Guinness</p>
+                  <p class="subtitle">Upland Brewery</p>
+                  <a class="button">Post</a>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box has-background-warning">
+                  <figure class="image">
+                    <img src="./assets/img/BadElmers.png">
+                  </figure>
+                  <p class="title">Bad Elmer's Porter</p>
+                  <p class="subtitle">Upland Brewery</p>
+                  <a class="button">Post</a>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box has-background-warning">
+                  <figure class="image">
+                    <img src="./assets/img/Vice-Black-Currant.jpg">
+                  </figure>
+                  <p class="title">Vice w/ Black Currant</p>
+                  <p class="subtitle">Wild Barrel Brewing</p>
+                  <a class="button">Post</a>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box has-background-warning">
+                  <figure class="image">
+                    <img src="./assets/img/guinness.jpg">
+                  </figure>
+                  <p class="title">Michael's fav</p>
+                  <p class="subtitle">Oskar Blues Brewery</p>
+                  <a class="button">Post</a>
+                </article>
+              </div>
+            </div>
+          </div>
+      </section>
