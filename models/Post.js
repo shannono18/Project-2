@@ -7,8 +7,8 @@ Post.init({
 	title: DataTypes.STRING,
 	comment: DataTypes.STRING,
 	rating: DataTypes.FLOAT,
-	dnd: DataTypes.BOOLEAN,
-	fav: DataTypes.BOOLEAN
+	fav: DataTypes.BOOLEAN,
+	img_url: DataTypes.STRING
 }, { sequelize, modelName: 'post' })
 
 module.exports = Post
