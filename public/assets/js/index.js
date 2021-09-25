@@ -29,14 +29,17 @@ document.getElementById('beer-search').addEventListener('click', event => {
 
 					// Work on Design part!!
 					const beerElem = document.createElement('div')
-					beerElem.classList = 'tile is-parent'
+					beerElem.classList = 'card is-parent'
 					beerElem.innerHTML = `
-					<article class="tile is-child box has-background-warning">
+					<article class="card is-child box has-background-warning">
 						<figure class="image">
 							<img src="${img}">
 						</figure>
-						<p class="title">${beer_name}</p>
-						<p class="subtitle">${beer_type}</p>
+						<p class="content">${beer_name}</p>
+						<p class="content">${beer_type}</p>
+						<p class="content">${beer_brewery}</p>
+					    <p class="content">${beer_abv}</p>
+						<input class="input is-rounded" type="text" placeholder="Comment">
 						<a class="button">Post</a>
 					</article>
 					`

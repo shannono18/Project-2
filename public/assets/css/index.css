@@ -9,3 +9,7 @@
 .parallax {
     opacity: 0.5;
 }
+.card {
+	text-align: center;
+	margin:auto;
+  }
