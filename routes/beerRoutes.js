@@ -17,5 +17,16 @@ router.get('/beers/:beer', (req, res) => {
 			res.json(searchResults)
 		})
 })
+//passport.authenticate('jwt'),
+router.post('/beers/add', (req, res) => Beer.create({
+	name: req.body.name,
+	type: req.body.type,
+	abv: req.body.abv,
+	brewery: req.body.brewery,
+	img_url: req.body.img_url
+})
+	.then(beer => Beer.findOne({ where: { id: beer.id } }))
+	.then(beer => res.json(beer))
+	.catch(err => console.log(err)))
 
 module.exports = router
