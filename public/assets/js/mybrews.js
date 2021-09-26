@@ -35,18 +35,24 @@ axios.get('/api/users/posts', {
 	}
 })
 	.then(({ data: { username, posts } }) => {
-		posts.forEach(({ id, title, body }) => {
+		posts.forEach(({ name, type, abv, brewery, img_url }) => {
 			const postElem = document.createElement('li')
 			postElem.className = 'd-flex justify-content-between align-items-start mb-2 listItem'
 			postElem.innerHTML = `
-        <div class="ms-2 me-auto">
-          <div class="fw-bold">${title}</div>
-          ${body}
-        </div>
-        <span class="badge bg-primary rounded-pill infoPill">${username}</span>
-        <span data-id="${id}" class="deletePost badge bg-danger rounded-pill">x</span>
+        <div class="tile is-parent has-background-warning">
+						  <article class="tile is-child box">
+							  <figure class="image">
+								  <img src="${img}">
+							  </figure>
+							  <p class="title">${beer_name}</p>
+							  <p class="subtitle">${beer_type}</p>
+							  <p class="subtitle">${beer_brewery}</p>
+							  <p class="content">${beer_abv}</p>
+							  <p class="content"> ?</p>
+						  </article>
+					  </div>
       `
-			document.getElementById('posts').append(postElem)
+			document.getElementById('Beers I tried').append(postElem)
 		})
 	})
 	.catch(err => console.error(err))
