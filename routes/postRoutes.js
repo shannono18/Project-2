@@ -9,7 +9,7 @@ router.get('/posts', passport.authenticate('jwt'), (req, res) => {
 })
 
 //passport.authenticate('jwt')
-router.post('/posts', (req, res) => Post.create({
+router.post('/posts', passport.authenticate('jwt'), (req, res) => Post.create({
 	title: req.body.title,
 	comment: req.body.comment,
 	rating: req.body.rating,
