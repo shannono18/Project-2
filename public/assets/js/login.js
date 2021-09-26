@@ -2,6 +2,7 @@ const { bootstrap } = window
 
 document.getElementById('login').addEventListener('click', event => {
 	event.preventDefault()
+	
 	axios.post('/api/users/login', {
 		username: document.getElementById('lUsername').value,
 		password: document.getElementById('lPassword').value

@@ -85,7 +85,7 @@ document.getElementById('beer-search').addEventListener('click', event => {
 
 document.addEventListener('click', event => {
 	event.preventDefault()
-	if(event.target.classList.contains('modal-button')) {
+	if (event.target.classList.contains('modal-button')) {
 		var element = document.getElementById('modal')
 		element.classList.add("is-active")
 	}
@@ -93,7 +93,66 @@ document.addEventListener('click', event => {
 	if (event.target.classList.contains('modal-close')) {
 		var element = document.getElementById('modal')
 		element.classList.remove("is-active")
+
+		var element = document.getElementById('modal-post')
+		element.classList.remove("is-active")
 	}
+
+	if (event.target.classList.contains("add-beer-btn")) {
+		event.preventDefault()
+		axios.post('/api/beers/add', {
+			name: document.getElementById('add-beer-name').value,
+			type: document.getElementById('add-beer-type').value,
+			abv: document.getElementById('add-beer-abv').value,
+			brewery: document.getElementById('add-beer-brewery').value,
+			img_url: 'https://e7.pngegg.com/pngimages/294/63/png-clipart-two-clear-beer-steins-with-brown-liquid-illustration-beer-drawing-cartoon-euclidean-cartoon-beer-cartoon-character-food.png'
+		})
+			.then(() => {
+				var element = document.getElementById('modal')
+				element.classList.remove("is-active")
+				alert('Beer added! Please search and post it!')
+				window.location = '/'
+			})
+
+		var element = document.getElementById('modal')
+		element.classList.remove("is-active")
+	}
+
+	const localStorage = window.localStorage
+
+	if (event.target.classList.contains("post-btn")) {
+		event.preventDefault()
+
+		localStorage.setItem("name", event.target.previousElementSibling.previousElementSibling.textContent)
+		localStorage.setItem("img_url", event.target.previousElementSibling.previousElementSibling.previousElementSibling.firstChild.nextSibling.src)
+
+
+		var element = document.getElementById('modal-post')
+		element.classList.add("is-active")
+	}
+
+	if (event.target.classList.contains('comments-post-btn')) {
+		event.preventDefault()
+		axios.post('/api/posts', {
+			title: localStorage.getItem("name"),
+			comment: document.getElementById('comments').value,
+			rating: document.getElementById('rating').value,
+			fav: 0,
+			img_url: localStorage.getItem("img_url")
+		})
+			.then(() => {
+				var element = document.getElementById('modal-post')
+				element.classList.remove("is-active")
+				alert("posted!")
+				window.location = '/'
+				localStorage.clear()
+			})
+
+		var element = document.getElementById('modal-post')
+		element.classList.remove("is-active")
+	}
+
+
 
 })
 
