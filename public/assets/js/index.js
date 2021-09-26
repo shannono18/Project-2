@@ -156,6 +156,18 @@ document.addEventListener('click', event => {
 
 })
 
+document.getElementById('logOut-In-toggle').addEventListener('', event => {
+	if (!toggle) {
+		document.getElementById('logOut-In-toggle').textContent = 'Log In'
+
+		toggle = true
+	}
+	else {
+		document.getElementById('logOut-In-toggle').textContent = 'Log Out'
+
+		toggle = false
+	}
+})
 
 // new universalParallax().init({
 //     speed: 6.0
