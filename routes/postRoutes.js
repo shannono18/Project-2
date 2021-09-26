@@ -8,17 +8,19 @@ router.get('/posts', passport.authenticate('jwt'), (req, res) => {
 		.catch(err => console.log(err))
 })
 
-//passport.authenticate('jwt')
-router.post('/posts', (req, res) => Post.create({
+router.post('/posts', passport.authenticate('jwt'), (req, res) => Post.create({
 	title: req.body.title,
 	comment: req.body.comment,
 	rating: req.body.rating,
 	fav: req.body.fav,
 	img_url: req.body.img_url,
-	// uid: req.user.id
+	uid: req.user.id
 })
 	.then(post => Post.findOne({ where: { id: post.id }, include: 'u' }))
-	.then(post => res.json(post))
+	.then(post => {
+		console.log(post)
+		res.json(post)
+	})
 	.catch(err => console.log(err)))
 
 router.delete('/posts/:id', (req, res) => Post.destroy({ where: { id: req.params.id } })
