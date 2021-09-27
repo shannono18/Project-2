@@ -6,15 +6,7 @@ function openTab(event, tabTitle) {
 	for (i = 0; i < tabcontent.length; i++) {
 		tabcontent[i].style.display = "none";
 	}
-	tablinks = document.getElementsByClassName("tablinks");
-	for (i = 0; i < tablinks.length; i++) {
-		tablinks[i].className = tablinks[i].className.replace(" is-active", "");
-	}
-	document.getElementById(tabTitle).style.display = "block";
-	event.currentTarget.className += " is-active";
-}
-
-const toggleBurger = () => {
+	tabconst toggleBurger = () => {
 	let burgerIcon = document.getElementById('burger');
 	let dropMenu = document.getElementById('menu');
 	burgerIcon.classList.toggle('is-active');
