@@ -40,9 +40,9 @@ document.getElementById('beer-search').addEventListener('click', event => {
 
 					// Work on Design part!!
 					const beerElem = document.createElement('div')
-					beerElem.classList = 'card is-parent'
+					beerElem.classList = 'tile is-parent has-background-warning'
 					beerElem.innerHTML = `
-					<article class="card is-child box has-background-warning">
+					<article class="tile is-child box">
 						<figure class="image">
 							<img src="${img}">
 						</figure>
@@ -52,6 +52,7 @@ document.getElementById('beer-search').addEventListener('click', event => {
 					  <p class="content">${beer_abv}</p>
 						<a class="button post-btn">Post</a>
 					</article>
+					<p class="px-1">
 					`
 					// <input class="input is-rounded" type="text" placeholder="Comment"> deleted from line 58
 

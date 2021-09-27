@@ -2,21 +2,19 @@
 <html lang="en">
 
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brew Keeper</title>
-    <link rel="icon" href="./assets/img/Beer-icon.png">
-    <link rel="stylesheet" href="./assets/css/mybrews.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css%22/%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Special+Elite&display=swap" rel="stylesheet">
-  </head>
-  <body>
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brew Keeper</title>
+  <link rel="icon" href="./assets/img/Beer-icon.png">
+  <link rel="stylesheet" href="./assets/css/mybrews.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css%22/%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
 <body>
 
   <!-- Nav bar and hamburger menu -->
@@ -79,8 +77,8 @@
       <nav class="tabs is-boxed is-fullwidth is-large">
         <div class="container">
           <ul>
-            <li class="tablinks is-active" onclick="openTab(event,'Beers I Like')"><a>Beers I Like</a></li>
-            <li class="tablinks" onclick="openTab(event,'Beers I Tried')"><a>Beers I Tried</a></li>
+            <li class="tablinks is-active" onclick="openTab(event,'Beers I Tried')"><a>Beers I Tried</a></li>
+            <li class="tablinks" onclick="openTab(event,'Beers I Like')"><a>Beers I Like</a></li>
           </ul>
         </div>
       </nav>
@@ -89,14 +87,18 @@
   <br>
   <!-- Tabs content-->
   <section>
-    <div id="Beers I Tried" class="tabcontent">
-      <div id="result-display-tried"></div>
+    <div id="Beers I Tried" class="tabcontent has-background-warning">
+      <div class="container has-text-centered tile is-ancestor" id="result-display-tried">
+  
+      </div>
     </div>
   </section>
   <br>
   <section>
-    <div id="Beers I Like" class="tabcontent" style="display:none">
-      <div id="result-display-like"></div>
+    <div id="Beers I Like" class="tabcontent has-background-warning" style="display:none">
+      <div class="container has-text-centered tile is-ancestor" id="result-display-like">
+  
+      </div>
     </div>
   </section>
 

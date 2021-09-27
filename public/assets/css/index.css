@@ -7,11 +7,22 @@
 	background-color: transparent;
 	font-family: 'Special Elite', cursive;
 }
+
 .parallax {
-    opacity: 0.5;
+	opacity: 0.5;
 }
+
 .card {
 	text-align: center;
+
+	margin: auto;
+}
+
+.container #result-display {
+	align-items: center;
+	justify-items: center;
+}
+=======
 	margin:auto;
   }
 .container {
@@ -20,3 +31,4 @@
 h1 {
 	text-shadow: 2px 2px white;
   }
+
