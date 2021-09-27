@@ -25,7 +25,7 @@ axios.get('/api/users/posts', {
 				// fav==0 so beer I tried
 				if (!fav) {
 					const postElem = document.createElement('div')
-					postElem.classList = 'tile is-four is-parent has-background-warning'
+					postElem.classList = 'tile is-2 is-parent has-background-warning'
 					postElem.innerHTML = `
 					<article class="tile is-child box">
 						<figure class="image">
@@ -44,7 +44,7 @@ axios.get('/api/users/posts', {
 				}
 				else {
 					const postElem = document.createElement('div')
-					postElem.classList = 'tile is-four is-parent has-background-warning'
+					postElem.classList = 'tile is-2 is-parent has-background-warning'
 					postElem.innerHTML = `
 					<article class="tile is-child box">
 						<figure class="image">
