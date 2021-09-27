@@ -156,18 +156,11 @@ document.addEventListener('click', event => {
 
 })
 
-document.getElementById('logOut-In-toggle').addEventListener('', event => {
-	if (!toggle) {
-		document.getElementById('logOut-In-toggle').textContent = 'Log In'
-
-		toggle = true
-	}
-	else {
-		document.getElementById('logOut-In-toggle').textContent = 'Log Out'
-
-		toggle = false
-	}
-})
+if (localStorage.getItem('token')) { 
+	document.getElementById('signUp').innerHTML = ' '
+	document.getElementById('logOut-In-toggle').innerHTML = `<strong> Log Out </strong>`
+} else{ document.getElementById('signUp').innerHTML = `<strong> Sign Up </strong>`
+document.getElementById('logOut-In-toggle').innerHTML = `<strong> Log In </strong>`}
 
 // new universalParallax().init({
 //     speed: 6.0
