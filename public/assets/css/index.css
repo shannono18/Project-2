@@ -14,6 +14,7 @@
 
 .card {
 	text-align: center;
+<<<<<<< HEAD
 	margin: auto;
 }
 
@@ -21,3 +22,13 @@
 	align-items: center;
 	justify-items: center;
 }
+=======
+	margin:auto;
+  }
+.container {
+	background-image: ;
+}
+h1 {
+	text-shadow: 2px 2px white;
+  }
+>>>>>>> 3c6c81591c98ce6e16c1f5575ed1f5e1c7136118

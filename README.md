@@ -20,6 +20,8 @@ Mysql and Sequelize
 Bulma Styling Library
 Passport JS
 Heroku
+Parallax
+JS Cookie
 
 # Authors
 Lan Bui - Github @lan714
