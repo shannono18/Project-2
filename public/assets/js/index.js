@@ -40,7 +40,7 @@ document.getElementById('beer-search').addEventListener('click', event => {
 
 					// Work on Design part!!
 					const beerElem = document.createElement('div')
-					beerElem.classList = 'tile is-parent has-background-warning'
+					beerElem.classList = 'tile is-3 is-parent has-background-warning'
 					beerElem.innerHTML = `
 					<article class="tile is-child box">
 						<figure class="image">
@@ -67,10 +67,10 @@ document.getElementById('beer-search').addEventListener('click', event => {
 				document.getElementById('result-display').innerHTML = ''
 
 				const addElem = document.createElement('div')
-				addElem.classList = 'button add-btn'
+				addElem.classList = 'add-btn'
 				addElem.innerHTML = `
 				<p>
-				<button class="button is-primary is-large modal-button" data-target="modal" aria-haspopup="true">We don't have your beer in our Database! Please Add your beer into database!
+				<button class="button is-primary is-large modal-button has-background-dark" data-target="modal" aria-haspopup="true">We don't have your beer in our Database! Please Add your beer into database!
 				</button>
 				</p>
 				`
