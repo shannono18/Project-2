@@ -6,7 +6,10 @@ document.getElementById('register').addEventListener('click', event => {
     username: document.getElementById('username').value,
     password: document.getElementById('password').value
   })
-    .then(() => alert('User registered! Log in.'))
+    .then(() => {
+      alert('User registered! Log in.')
+      window.location = '/login.html'
+    })
     .catch(err => console.error(err))
 })
 
