@@ -1,8 +1,4 @@
-// Search function
-const { axios } = window
-
 const localStorage = window.localStorage
-
 
 document.addEventListener('click', event => {
 	event.preventDefault()

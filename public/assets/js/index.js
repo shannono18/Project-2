@@ -1,8 +1,6 @@
 // Search function
 const { axios } = window
 
-const localStorage = window.localStorage
-
 document.getElementById('goHome').addEventListener('click', () => {
 	window.location = '/'
 })
@@ -13,22 +11,6 @@ document.getElementById('aboutUs').addEventListener('click', () => {
 
 document.getElementById('myBrews').addEventListener('click', () => {
 	window.location = '/mybrews.html'
-})
-
-document.getElementById('signUp').addEventListener('click', () => {
-	console.log('signup')
-	window.location = './register.html'
-})
-
-document.getElementById('logIn').addEventListener('click', () => {
-	console.log('logIn')
-	window.location = './login.html'
-})
-
-document.getElementById('logOut').addEventListener('click', () => {
-	console.log('logOut')
-	localStorage.removeItem('token')
-	window.location = './login.html'
 })
 
 document.getElementById('beer-search').addEventListener('click', event => {
@@ -99,7 +81,7 @@ document.getElementById('beer-search').addEventListener('click', event => {
 
 document.addEventListener('click', event => {
 	event.preventDefault()
-	
+
 	if (event.target.classList.contains('modal-button')) {
 		var element = document.getElementById('modal')
 		element.classList.add("is-active")
@@ -173,19 +155,6 @@ document.addEventListener('click', event => {
 
 		var element = document.getElementById('modal-post')
 		element.classList.remove("is-active")
-	}
-})
-
-document.getElementById('logOut-In-toggle').addEventListener('', event => {
-	if (!toggle) {
-		document.getElementById('logOut-In-toggle').textContent = 'Log In'
-
-		toggle = true
-	}
-	else {
-		document.getElementById('logOut-In-toggle').textContent = 'Log Out'
-
-		toggle = false
 	}
 })
 
