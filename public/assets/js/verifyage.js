@@ -3,7 +3,7 @@ function verify() {
   yes = Number(document.getElementById("age").value)
   if (yes >= 21) {
 
-    Cookies.set('validAge', true, { expires: 7 })
+    Cookies.set('validAge', true, { expires: 1/24 })
     window.location.replace('./index.html')
   }
   else {

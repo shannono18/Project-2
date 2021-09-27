@@ -58,3 +58,4 @@ else {
 	document.getElementById('signup-loginout').append(signUpElem)
 	document.getElementById('signup-loginout').append(logInElem)
 }
+
