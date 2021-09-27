@@ -9,9 +9,18 @@
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="node_modules/universal-parallax/dist/universal-parallax.min.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Special+Elite&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script>
+      if (!Cookies.get('validAge') && window.location.href !== './verifyage.html') {
+        window.location.replace('./verifyage.html');
+      }
+    </script>
+
   </head>
   <!-- Nav bar and hamburger menu -->
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
@@ -36,21 +45,26 @@
             <a class="navbar-item" id="myBrews" href="./mybrews.html">
               My Brews
             </a>
-            <a class="navbar-item" id="aboutUs" href="./aboutus.html">About Us</a>
+
+            <a class="navbar-item" id="aboutUs" href="aboutus.html">About Us</a>
+
           </div>
       
           <div class="navbar-end">
             <div class="navbar-item">
+
               <div class="buttons">
                 <a class="button is-warning" href="./register.html">
                   <strong>Sign up</strong>
                 </a>
                 <a class="button is-light" id="logOut" href="./login.html">
                   <strong>Logout</strong>
+
                 </a>
               </div>
             </div>
           </div>
+
         </div>
       </nav>
 <!-- Hero section -->
@@ -74,7 +88,7 @@
 <section>
     <div class="container result-display">
       <div class="container is-full has-text-centered tile is-ancestor" id="result-display">
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-content">
             <div class="content">
             </div>
@@ -96,8 +110,18 @@
             <div class="content">             
             </div>
           </div>
-        </div>
+        </div> -->
+      </div>
+    </div>
 </section>
+
+
+<!-- <section class="card">
+  <div class="card-content" id="result-display">
+  </div>
+</section> -->
+
+
     <!-- Modal -->
 
     <div id="modal" class="modal">
@@ -200,6 +224,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./assets/js/index.js"></script>
+  <script src="assets/js/log.js"></script>
   <script src="node_modules/universal-parallax/dist/universal-parallax.min.js"></script>
   </body>
 </html>
