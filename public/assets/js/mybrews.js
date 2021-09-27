@@ -40,13 +40,13 @@ document.getElementById('logOut').addEventListener('click', () => {
 
 document.addEventListener('click', event => {
 	if (event.target.classList.contains('like-btn')) {
-		console.log('liked!')
 
 	}
 
 
 
 	if (event.target.classList.contains('delete-btn')) {
+		console.log(event.target.dataset)
 		axios.delete(`/api/posts/${event.target.dataset.id}`, {
 			headers: {
 				Authorization: `Bearer ${localStorage.getItem('token')}`

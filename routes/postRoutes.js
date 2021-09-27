@@ -23,7 +23,7 @@ router.post('/posts', passport.authenticate('jwt'), (req, res) => Post.create({
 	})
 	.catch(err => console.log(err)))
 
-router.delete('/posts/:id', (req, res) => Post.destroy({ where: { id: req.params.id } })
+router.delete('/posts/:id', (req, res) => Post.destroy({ where: { title: req.params.id } })
 	.then(() => res.sendStatus(200))
 	.catch(err => console.log(err)))
 

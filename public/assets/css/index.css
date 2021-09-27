@@ -22,11 +22,9 @@
 .container #result-display {
 	align-items: center;
 	justify-items: center;
-	margin: auto;
-  }
-.container {
-	background-image: ;
+
 }
+
 h1 {
 	text-shadow: 2px 2px white;
   }
