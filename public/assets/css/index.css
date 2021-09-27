@@ -1,3 +1,4 @@
+
 .hero {
 	background-image: url(../img/beer-background.jpg);
 	background-position: center center;
@@ -31,4 +32,6 @@
 h1 {
 	text-shadow: 2px 2px white;
   }
-
+h2 {
+	text-shadow: 2px 2px white;
+  }
