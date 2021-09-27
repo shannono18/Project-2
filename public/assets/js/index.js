@@ -1,6 +1,8 @@
 // Search function
 const { axios } = window
 
+const localStorage = window.localStorage
+
 document.getElementById('goHome').addEventListener('click', () => {
 	window.location = '/'
 })
@@ -13,9 +15,20 @@ document.getElementById('myBrews').addEventListener('click', () => {
 	window.location = '/mybrews.html'
 })
 
+document.getElementById('signUp').addEventListener('click', () => {
+	console.log('signup')
+	window.location = './register.html'
+})
+
+document.getElementById('logIn').addEventListener('click', () => {
+	console.log('logIn')
+	window.location = './login.html'
+})
+
 document.getElementById('logOut').addEventListener('click', () => {
+	console.log('logOut')
 	localStorage.removeItem('token')
-	window.location = '/login.html'
+	window.location = './login.html'
 })
 
 document.getElementById('beer-search').addEventListener('click', event => {
@@ -54,11 +67,12 @@ document.getElementById('beer-search').addEventListener('click', event => {
 						<p class="content">${beer_name}</p>
 						<p class="content">${beer_type}</p>
 						<p class="content">${beer_brewery}</p>
-					    <p class="content">${beer_abv}</p>
-						<input class="input is-rounded" type="text" placeholder="Comment">
-						<a class="button">Post</a>
+					  <p class="content">${beer_abv}</p>
+						<a class="button post-btn">Post</a>
 					</article>
 					`
+					// <input class="input is-rounded" type="text" placeholder="Comment"> deleted from line 58
+
 					document.getElementById('result-display').append(beerElem)
 				})
 				document.getElementById('beer-name').value = ''
@@ -85,6 +99,7 @@ document.getElementById('beer-search').addEventListener('click', event => {
 
 document.addEventListener('click', event => {
 	event.preventDefault()
+	
 	if (event.target.classList.contains('modal-button')) {
 		var element = document.getElementById('modal')
 		element.classList.add("is-active")
@@ -106,6 +121,10 @@ document.addEventListener('click', event => {
 			abv: document.getElementById('add-beer-abv').value,
 			brewery: document.getElementById('add-beer-brewery').value,
 			img_url: 'https://e7.pngegg.com/pngimages/294/63/png-clipart-two-clear-beer-steins-with-brown-liquid-illustration-beer-drawing-cartoon-euclidean-cartoon-beer-cartoon-character-food.png'
+		}, {
+			headers: {
+				Authorization: `Bearer ${localStorage.getItem('token')}`
+			}
 		})
 			.then(() => {
 				var element = document.getElementById('modal')
@@ -118,13 +137,11 @@ document.addEventListener('click', event => {
 		element.classList.remove("is-active")
 	}
 
-	const localStorage = window.localStorage
-
 	if (event.target.classList.contains("post-btn")) {
 		event.preventDefault()
 
-		localStorage.setItem("name", event.target.previousElementSibling.previousElementSibling.textContent)
-		localStorage.setItem("img_url", event.target.previousElementSibling.previousElementSibling.previousElementSibling.firstChild.nextSibling.src)
+		localStorage.setItem("name", event.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent)
+		localStorage.setItem("img_url", event.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.firstChild.nextSibling.src)
 
 
 		var element = document.getElementById('modal-post')
@@ -139,21 +156,24 @@ document.addEventListener('click', event => {
 			rating: document.getElementById('rating').value,
 			fav: 0,
 			img_url: localStorage.getItem("img_url")
+		}, {
+			headers: {
+				Authorization: `Bearer ${localStorage.getItem('token')}`
+			}
 		})
 			.then(() => {
 				var element = document.getElementById('modal-post')
 				element.classList.remove("is-active")
+
 				alert("posted!")
 				window.location = '/'
-				localStorage.clear()
+				localStorage.removeItem("name")
+				localStorage.removeItem("img_url")
 			})
 
 		var element = document.getElementById('modal-post')
 		element.classList.remove("is-active")
 	}
-
-
-
 })
 
 document.getElementById('logOut-In-toggle').addEventListener('', event => {
@@ -168,6 +188,7 @@ document.getElementById('logOut-In-toggle').addEventListener('', event => {
 		toggle = false
 	}
 })
+
 
 // new universalParallax().init({
 //     speed: 6.0

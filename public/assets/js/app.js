@@ -68,3 +68,5 @@ axios.get('/api/posts', {
 		console.log(err)
 		window.location = '/login.html'
 	})
+
+

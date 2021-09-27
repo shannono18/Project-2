@@ -18,7 +18,7 @@ router.get('/beers/:beer', (req, res) => {
 		})
 })
 //passport.authenticate('jwt'),
-router.post('/beers/add', (req, res) => Beer.create({
+router.post('/beers/add', passport.authenticate('jwt'), (req, res) => Beer.create({
 	name: req.body.name,
 	type: req.body.type,
 	abv: req.body.abv,
