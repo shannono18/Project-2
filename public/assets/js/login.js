@@ -12,7 +12,8 @@ document.getElementById('login').addEventListener('click', event => {
 				localStorage.setItem('token', token)
 				window.location = '/'
 			} else {
-				alert('Invalid username or password.')
+				var element = document.getElementById('modal-login')
+				element.classList.add('is-active')
 			}
 		})
 		.catch(err => console.error(err))
@@ -28,3 +29,9 @@ document.getElementById('login').addEventListener('click', event => {
 // 		.catch(err => console.error(err))
 // })
 
+document.addEventListener('click', event => {
+	if (event.target.classList.contains('modal-close')) {
+		var element = document.getElementById('modal-login')
+		element.classList.remove("is-active")
+	}
+})
