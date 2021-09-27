@@ -14,7 +14,7 @@ axios.get('/api/users/posts', {
 			if (posts.length == 0) {
 				// if there is no post display no result
 				const postElem = document.createElement('div')
-					postElem.classList = 'card is-parent'
+				postElem.classList = 'card is-parent'
 				postElem.innerHTML = `
 					NO POST
 					`
@@ -24,10 +24,10 @@ axios.get('/api/users/posts', {
 			else {
 				// fav==0 so beer I tried
 				if (!fav) {
-					const postElem = document.createElement('div') 
-						postElem.classList = 'card is-parent'
+					const postElem = document.createElement('div')
+					postElem.classList = 'tile is-parent has-background-warning'
 					postElem.innerHTML = `
-					<article class="card is-child box has-background-warning">
+					<article class="tile is-child box">
 						<figure class="image">
 							<img src="${img_url}">
 						</figure>
@@ -37,25 +37,26 @@ axios.get('/api/users/posts', {
 						<a class="button like-btn">Like</a>
 						<a class="button delete-btn">Delete</a>
 					</article>
+					<p class="px-1">
 					`
 
 					document.getElementById('result-display-tried').append(postElem)
 				}
-
-				// fav == 1 beer I like
 				else {
 					const postElem = document.createElement('div')
-						postElem.classList = 'card is-parent'
+					postElem.classList = 'tile is-parent has-background-warning'
 					postElem.innerHTML = `
-					<article class="card is-child box has-background-warning">
+					<article class="tile is-child box">
 						<figure class="image">
 							<img src="${img_url}">
 						</figure>
 						<p class="content">${title}</p>
 						<p class="content">${comment}</p>
 						<p class="content">${rating}</p>
+						<a class="button like-btn">Like</a>
 						<a class="button delete-btn">Delete</a>
 					</article>
+					<p class="px-1">
 					`
 
 					document.getElementById('result-display-like').append(postElem)
