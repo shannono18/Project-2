@@ -40,8 +40,9 @@ document.getElementById('logOut').addEventListener('click', () => {
 
 document.addEventListener('click', event => {
 	if (event.target.classList.contains('like-btn')) {
-		console.log('liked!')
+		
 
+		//document.getElementById('result-diplay-like').append(event.target.parentNode.parentNode())
 	}
 
 
