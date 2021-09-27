@@ -9,6 +9,11 @@
 	<link rel="icon" href="./assets/img/Beer-icon.png">
 	<link rel="stylesheet" href="./assets/css/index.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+	<link href="node_modules/universal-parallax/dist/universal-parallax.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Special+Elite&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -45,10 +50,12 @@
 						<a class="button is-warning signUp" id="signUp" href="./register.html">
 							<strong>Sign up</strong>
 						</a>
+
 						<a class="button is-warning logIn" id="logIn" href="./login.html">
 							<strong>Log In</strong>
 						</a>
 						<a class="button is-warning logOut" id="logOut" href="./login.html">
+
 							<strong>Logout</strong>
 						</a>
 					</div>
@@ -57,13 +64,13 @@
 		</div>
 		</nav>
 	<!-- Hero section -->
-	<section id="hero" class="hero is-full has-background-warning">
+	<section id="hero" class="hero is-full is-medium has-background-warning">
+		<div class="parallax" background-image="../img/beer-background.jpg"></div>
 		<div class="hero-body">
 			<div class="container has-text-centered">
-				<h1 class="title">About Us</h1>
-				<h2 class="subtitle">Here at Brew Keeper, you can let the world know what beers you've tried and what you've liked.</p>
-					<p>You'll be able to find a beer, keep a list of beers you've tried and save the ones you liked. Search for a wide varity of options and let your tastebuds have a great time.</h2>
-
+				<h1 class="title is-8"><strong>About Us</strong></h1>
+				<br>
+				<h2 class="subtitle"><strong>Here at Brew Keeper, you can find a beer, keep a list of beers you've tried and save the ones you liked. Search for a wide varity of options and let your tastebuds have a great time.</strong></h2>
 			</div>
 
 			<br>
@@ -144,6 +151,8 @@
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="node_modules/universal-parallax/dist/universal-parallax.min.js"></script>
 <script src="assets/js/log.js"></script>
 <script src="assets/js/aboutus.js"></script>
 
