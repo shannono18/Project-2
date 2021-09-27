@@ -4,7 +4,7 @@ body, html {
 	background: url('../img/beer-background.jpg');
 	background-position: auto;
 	background-size: cover;
-	font-family: sans-serif;
+	font-family: 'Special Elite', cursive;
 }
 
 .loginbox {
@@ -41,7 +41,8 @@ h1 {
 	margin: 0;
 	padding: 0 0 20px;
 	text-align: center;
-	font-size: 22px;
+	font-size: 20px;
+	font-family: 'Special Elite', cursive;
 }
 
 .loginbox p {

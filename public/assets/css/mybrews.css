@@ -4,6 +4,9 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	background-color: #999;
+	background-color: transparent;
 	font-family: 'Special Elite', cursive;
+}
+footer {
+    height: 80px;
 }
