@@ -149,7 +149,8 @@ document.addEventListener('click', event => {
 				element.classList.remove("is-active")
 
 				alert("posted!")
-				window.location = '/'
+				document.getElementById('comments').value = ""
+				document.getElementById('rating').value = ""
 				localStorage.removeItem("name")
 				localStorage.removeItem("img_url")
 			})
